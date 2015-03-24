@@ -1,0 +1,58 @@
+<form id="taxPayerForm" action="CSVServlet" method="POST">
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            Данные плательщика
+        </div>
+        <div class="panel-body">
+            <div class="form-group">
+                <label for="fId_INN" class="control-label">ИНН индивидуального предпринимателя</label>
+                <input type="text" class="form-control" id="fId_INN" name="inn"
+                       placeholder="Введите ИНН" maxlength="12">
+            </div>
+        </div>
+    </div>
+
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            Данные объекта
+        </div>
+        <div class="panel-body">
+            <div class="form-group">
+                <label for="fId_ADRESS" class="control-label">Адрес торгового объекта</label>
+                <input type="text" class="form-control" id="fId_ADRESS" name="address"
+                       placeholder="Введите адрес">
+            </div>
+            <div class="form-group">
+                <label for="fId_AREA" class="control-label">Площадь торгового объекта, кв.м.</label>
+                <input type="text" class="form-control" id="fId_AREA" name="area"
+                       placeholder="Введите площадь, кв.м." maxlength="8">
+            </div>
+        </div>
+    </div>
+
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            Данные платежа
+        </div>
+        <div class="panel-body">
+            <div class="form-group">
+                <label for="fId_SUM" class="control-label">Сумма уплаченного сбора, руб.</label>
+                <input type="text" class="form-control" id="fId_SUM" name="sum"
+                       placeholder="Введите сумму, руб.">
+            </div>
+            <div class="form-group">
+                <label for="fId_PERIOD" class="control-label">Период (квартал), за который произведена
+                    оплата</label>
+                <select class="form-control" id="fId_PERIOD" name="period">
+                    <option selected disabled hidden>Выберите оплаченный квартал</option>
+                </select>
+                <span class="help-block with-errors"></span>
+            </div>
+            <div id="datepicker" class="form-group">
+                <label for="fId_DATE" class="control-label">Дата осуществления платежа</label>
+                <input type="text" class="form-control" id="fId_DATE" name="date"
+                       placeholder="Укажите дату">
+            </div>
+        </div>
+    </div>
+</form>
